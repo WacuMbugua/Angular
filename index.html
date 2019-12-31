@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body> <!--basics-->
+    <div ng-app="">
+        <p>Input myid in the input box:</p>
+        <p><input type="text" ng-model="id"></p>
+        <br>
+        <h1>Welcome!{{id}}</h1>
+ 
+    </div>  
+    <!--Directives-->
+    <h2>Using Show directive</h2>
+<div ng-app="" >
+<input type="checkbox" ng-model="showHideDiv">Show Div
+<div ng-show="showHideDiv" style="background-color:yellow;height:50px;">
+<p>I am a div</p>
+<p>I appear when the check box is checked.</p>
+</div>
+</div>
+<br>
+<h3>Using Hide directive</h3>
+<div ng-app="" >
+<input type="checkbox" ng-model="HideShowDiv">Hide Div
+<div ng-hide="HideShowDiv" style="background-color:pink;height:50px;">
+<p>I am a div</p>
+<p>I will disappeared when the check box is checked.</p>
+</div>
+</div>
+
+<!--Filters-->
+<h4>Using Upper Case Filter</h4>
+<div ng-app=""  ng-init="Username= 'ray' ">
+<p>User Name: <input type="text" ng-model = "Username"></p>
+<p style="color:red" ng-bind="Username | uppercase"></p> 
+</div>
+</body>
+</html>
+

@@ -1,0 +1,19 @@
+<html>
+<script src= "js\angular.min.js"></script>
+<body>
+<div ng-app="Calculation" ng-controller="myController">
+
+First Number: <input type="number" ng-model="firstNumber"><br>
+Second Number: <input type="number" ng-model="secondNumber"><br>
+<br>
+Sum: {{firstNumber + secondNumber}}
+</div>
+<script>
+var app = angular.module('Calculation', [ ]);
+app.controller('myController', function($scope) {
+    $scope.firstNumber = 1000;
+    $scope.secondNumber = 1;
+});
+</script>
+</body>
+</html>
